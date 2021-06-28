@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="{% static 'css/admin.css' %}" type="text/css"> 
+
+
+{% block extracss %}
+{% endblock extracss %}
+
+<title>
+    Admin Home
+</title>
+{% block title %}
+    
+{% endblock title %}
+</head>
+
+{% block studentformactive %}
+    
+{% endblock studentformactive %}
+
+{% block adminhomeactive %}
+ active
+{% endblock adminhomeactive %}
+
+
+<body class="my_body"><br>
+
+    <br>
+    <a class="navbar-brand heading_write" href="{% url 'admin_home' %}"><strong>Your Administration</strong></a>	
+    &nbsp;&nbsp;
+        
+    <a class="nav-link heading_write" href="{% url 'home' %}">Back to Home?</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <a class="nav-link heading_write" href="{% url 'student_form' %}">Student Form</a>
+
+
+<div class="card div_main div_register ">
+    <h1 class=" text-white " >Student List</h1><br>
+    <div class="card-body text-dark">   
+        {% if student_list %}
+
+        {% for student in student_list  %}
+
+        <li> <a  class="div_register" href="{% url 'student_info' student.id %}">
+             ({{ student.roll }})- &nbsp;&nbsp;{{ student.first_name }} {{ student.last_name}} </a> </li>
+
+    
+
+        
+        {% endfor %}
+        
+        {% else %}
+    
+        <h2>No student</h2>
+        {% endif %}
+    </div>
+</div>
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+{% block extrajs %}
+{% endblock extrajs %}
+
+
+</html>

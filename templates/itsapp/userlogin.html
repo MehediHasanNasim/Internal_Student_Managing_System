@@ -1,0 +1,58 @@
+{% extends 'itsapp/userauthbase.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock extracss %}
+
+
+{% block title %}
+        Login
+{% endblock title %}  
+
+
+
+
+{% block bodycontent %}
+
+<h1><a class="nav-link heading_write" href="{% url 'home' %}">Back to Home?</a></h1>
+<div class=" div_main div_register">
+    <div >
+        <div>
+            <h5 class="h1">Login</h5>
+        </div>
+        <div >      
+                {% for message in messages %}
+                    <h5 class="alert alert-warning">{{ message  }}</h5>
+                {% endfor %}              
+                
+            <form class="form_register" action="" method="POST">
+             
+                {% csrf_token %}
+
+                <div>
+                    <label class="form-control-label mt-3">Username:</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username" required>
+        
+                    <label class="form-control-label mt-3">Password:</label>
+                    <input type="password" class="form-control" name="password" placeholder="********" required>
+        
+                    <button class="btn btn-primary mt-3 submit">Login</button>
+                </div>
+            </form>
+            <div class="text-center"><a class="submitr" href="{% url 'registerpage' %}">Do not have account? Register</a></div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock bodycontent %}
+    
+
+{% block extrajs %}
+<script>
+    $(document).ready(function () {
+      window.history.replaceState('', '', window.location.href);
+    });
+  </script>
+{% endblock extrajs %}

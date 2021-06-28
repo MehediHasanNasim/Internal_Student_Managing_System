@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none !important;
+}
+.my_body {
+    background: url("BG.jpg");
+    background-size: 80%;
+    background-position: 50px 0px;
+}
+.heading_write{
+    font-size: 30px;
+    color:aliceblue;
+    margin-top: 10%;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto 200px auto;
+}
+.container{
+    width: 120%;
+    height: 70vh;
+    padding-left: 0%;
+    padding-right: 0%;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    
+}
+.logo{
+    width: 100px;
+    cursor: pointer;
+    margin-left: -3%;
+    transition: transform 0.5s;
+    
+}
+.menu-icon{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+} 
+navli{
+    flex: 15;
+    text-align: right;
+}
+navli ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+navli ul li a{
+    background-color: rgba(0,0,0,0.4);
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+.row{
+    display: flex;
+    height: 95%;
+    align-items: center;
+}
+.col{
+    background-color: rgba(0,0,0,0.6);
+    flex-basis: 50%;
+    border-radius: 50px;
+    margin-bottom: -10%;
+}
+h1{
+    color: #fff;
+    font-size: 90px;
+}
+p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 25px;
+}
+button{
+    width: 130px;
+    color: #000;
+    font-size: 17px;
+    padding: 7px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 5px;
+
+}
+.card{
+    width: 230px;
+    height:250px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px 70px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 12px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+
+}
+.card1{
+    background-image: url(study.jpg);
+}
+.card2{
+    background-image: url(studywatch.jpeg);
+}
+.card3{
+    background-image: url(bg\ concpt\ 1.jpg);
+}
+.card4{
+    background-image: url(bg\ concpt\ 3.jpg);
+}
+h1{
+    transition: transform 0.5s;
+}
+h1:hover{
+    transform: translateY(-5px);
+}
+button{
+    transition: transform 0.5s;
+}
+button:hover{
+    transform: translateY(-5px);
+}
+li{
+    transition: transform 0.5s;
+}
+li:hover{
+    transform: translateY(-5px);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.logo:hover{
+    transform: translateY(-5px);
+}
+h5{
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 10px;
+}

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.my_body {
+  background: url("bgcc2.jpg");
+  background-size: 80%;
+  background-position: 50px 0px;
+}
+.div_main {
+  width: 500px;
+  height: 700px;
+  margin: 50px auto 500px auto;
+}
+.h1 {
+  text-align: center;
+  padding: 15px;
+  font-family: sans-serif;
+}
+.div_register {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 30%;
+  font-size: 25px;
+  border-radius: 30px;
+  border: 1px soid rgba(255, 255, 255, 0.3);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  color: azure;
+}
+.heading_write {
+  font-size: 20px;
+  color: aliceblue;
+  margin-top: 10%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 30px;
+  width: 400px;
+  height: 300px;
+  margin: 50px auto 200px auto;
+}
+.form_register {
+  margin: 17px;
+}
+.heading_writee {
+  font-size: 20px;
+  color: aliceblue;
+  margin-top: 10%;
+  padding: 30px;
+  background-color: rgba(240, 8, 8, 0.8);
+  border-radius: 30px;
+  width: 400px;
+  height: 300px;
+  margin: 50px auto 200px auto;
+}
+.heading_writeee {
+  font-size: 20px;
+  color: aliceblue;
+  margin-top: 10%;
+  padding: 30px;
+  background-color: rgba(252, 169, 3, 0.986);
+  border-radius: 30px;
+  width: 400px;
+  height: 300px;
+  margin: 50px auto 200px auto;
+}
+.heading_writeeee {
+  font-size: 20px;
+  color: aliceblue;
+  margin-top: 10%;
+  padding: 30px;
+  background-color: rgba(3, 74, 252, 0.8);
+  border-radius: 30px;
+  width: 400px;
+  height: 300px;
+  margin: 50px auto 200px auto;
+}

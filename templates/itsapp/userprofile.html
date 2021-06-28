@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/userprofile.css' %}" type="text/css"> 
+
+<title>
+        user profile
+</title>
+
+
+
+
+<body class="my_body" style="background-color:rgb(0, 0, 0);">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}"><b><strong>WEBSITE</strong></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item 
+            
+            {% block homeactive %}
+                
+            {% endblock homeactive %}
+                
+            ">
+              <a class="nav-link" href="{% url 'home' %}"><b>Home</b></a>
+            </li>  
+
+
+            {% if user.is_authenticated and user.is_superuser %}
+            <li class="nav-item 
+            
+            {% block adminhomeactive %}
+                
+            {% endblock adminhomeactive %}
+                
+            ">  
+            <a class="nav-link" href="{% url 'admin_home' %}"><b>Administration</b></a>
+            </li>
+            {% endif %}
+
+            <li class="nav-item 
+            
+            {% block aboutactive %}
+                
+            {% endblock aboutactive %}
+                
+            ">
+            <a class="nav-link" href="{% url 'about_us' %}"><b>About Varsity</b></a>
+            </li>
+            
+
+            <li class="nav-item 
+            
+            {% block locationactive %}
+                
+            {% endblock locationactive %}
+                
+            ">
+            <a class="nav-link" href="{% url 'location' %}"><b>location</b></a>
+            </li>
+
+
+            <li class="nav-item 
+            {% block noticeactive %}
+                
+            {% endblock noticeactive %}    
+            ">
+            <a class="nav-link" href="{% url 'notice' %}"><b>Notice</b></a>
+            </li>
+            
+            {% if user.is_authenticated %}
+                 
+            <li class="nav-item 
+            {% block profileactive %}
+                active 
+            {% endblock profileactive %}
+            ">
+            
+            
+            <a class="nav-link" href="{% url 'userprofile' %}"><b>Profile</b></a>
+          
+            </li>
+            {% endif %}
+          </ul>
+          
+          
+          {% if user.is_authenticated %}
+          <a href="{% url 'logoutuser' %}" class="my-2 my-lg-0 btn btn-outline-danger my-2 my-sm-0">Logout</a>
+
+          {% else %}
+          <a href="{% url 'loginpage' %}" class="my-2 my-lg-0 btn btn-success my-2 my-sm-0">Login</a>
+          {% endif %}
+          
+          &nbsp;
+          
+          {% if user.is_authenticated %}
+            
+          {% else %}
+          <a href="{% url 'registerpage' %}" class="my-2 my-lg-0 btn btn-success my-2 my-sm-0">Signup</a>
+          {% endif %}
+            
+            
+          
+        </div>
+    </nav>
+
+
+<br>
+<div class="container">
+    <div class="card mycard">
+            <div class="card-header bg-primary text-white ">
+                    <h2>{{ user.username }}'s Profile</h2>
+            </div>
+            <div class="card-body my_card_body">
+                <h5>Email: {{ user.email }}</h5>
+                        
+                {% if user.profilepicture.image.url %}
+                <img src="{{ user.profilepicture.image.url }}" alt="" class="my_image text-center">
+                                
+                {% else %}
+                <img src="{% static 'image/blank.jpg' %}" alt="" class="my_image text-center">
+                                
+                {% endif %} 
+                    
+
+                {% if user.profilepicture.image.url %}
+                                
+                {% else %}
+                <img src="{{ user.student.image.url }}" alt="" class="my_image text-center">
+                    
+                        
+
+                {% endif %}
+
+
+                <h5>User id : {{ user.student.id }}</h5>
+                <h5>Student Name :  {{ user.student.first_name }} {{user.student.last_name}}</h5>
+                <h5>Department : {{ user.student.dept }}</h5>
+                <h5>Session : {{ user.student.session }}</h5>
+                <h5>Roll : {{ user.student.roll }}</h5>
+                <h5>Reg : {{ user.student.reg }}</h5>
+                <h5>Email : {{ user.student.email }}</h5>
+                <h5>Phone : {{ user.student.phone }}</h5>
+                <h5>Attend % : {{ user.student.atd_percent }}</h5>
+                <h5>Due : {{ user.student.due }}</h5>
+
+                <h5>Your Last visit: {{ user.last_login }}</h5>
+                <h5>join date: {{ user.date_joined }}</h5>
+                    
+                
+
+                
+                {% if user.is_authenticated and user.is_superuser %}
+
+                <form action="{% url 'delete_my_account' %}" method="POST">
+                {% csrf_token %}
+                        <button class="btn btn-danger mt-3">Delete My Account</button>
+                </form>
+                {% endif %}
+                <a href=" {% url 'notice' %} " class="btn btn-danger mt-3"><b>Check Notice?</b></a>
+                        
+                    
+            </div>
+    </div>
+</div>
+
+        
+</body>
+
+
+{% block extrajs %}
+<script>
+        $(document).ready(function () {
+          window.history.replaceState('', '', window.location.href);
+        });
+</script>
+{% endblock extrajs %}

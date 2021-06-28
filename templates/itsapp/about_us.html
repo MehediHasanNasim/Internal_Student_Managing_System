@@ -1,0 +1,35 @@
+{% extends 'itsapp/base.html' %}
+{% load static %}
+
+{% block extracss %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> 
+{% endblock extracss %}
+
+
+{% block title %}
+About us
+{% endblock title %}
+
+
+{% block aboutactive %}
+ active
+{% endblock aboutactive %}
+
+
+{% block bodycontent %}
+
+<h1 class="text-white text-center" style="background-color:rgb(33, 66, 97);"><br><b>About: </b><br><br></h1>
+
+<h5 class="text-light">Institute of Science & Technology (IST) was established in 1993, the first Institute in Bangladesh 
+    conducting Honors in Computer Science affiliated with National University. It was founded by Prof. Dr. 
+    Shahida Rafique, University of Dhaka. Inaugurated in the presence of Nobel Laureate Professor Dr. Abdus 
+    Salam & by the then Honorable Prime Minister of Bangladesh. Its a completely non-profit, non-government 
+    and non-political Institute.</h5>
+<h5 class="text-light">Own permanent campus building, situated at Dhanmondi. A peaceful, quiet and calm environment with 
+    spacious air-conditioned classroom, Rich library ( around 10000 books ) and auditorium. On campus doctor
+     and medical services are available.</h5>
+{% endblock bodycontent %}
+
+
+{% block extrajs %}
+{% endblock extrajs %}

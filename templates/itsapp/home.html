@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css"> 
+ 
+<title>
+    home
+</title>
+</head>
+<body class="my_body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'home' %}"><b><strong>WEBSITE</strong></b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item 
+            
+            {% block homeactive %}
+                
+            {% endblock homeactive %}
+                
+            ">
+              <a class="nav-link" href="{% url 'home' %}"><b>Home</b></a>
+            </li>  
+
+
+            {% if user.is_authenticated and user.is_superuser %}
+            <li class="nav-item 
+            
+            {% block adminhomeactive %}
+                
+            {% endblock adminhomeactive %}
+                
+            ">  
+            <a class="nav-link" href="{% url 'admin_home' %}"><b>Administration</b></a>
+            </li>
+            {% endif %}
+
+            
+            {% if user.is_authenticated %}
+                 
+            <li class="nav-item 
+            {% block profileactive %}
+                
+            {% endblock profileactive %}
+            ">
+            
+            
+            <a class="nav-link" href="{% url 'userprofile' %}"><b>Profile</b></a>
+          
+            </li>
+            {% endif %}
+          </ul>
+          
+          
+          {% if user.is_authenticated %}
+          <a href="{% url 'logoutuser' %}" class="my-2 my-lg-0 btn btn-outline-danger my-2 my-sm-0">Logout</a>
+
+          {% else %}
+          <a href="{% url 'loginpage' %}" class="my-2 my-lg-0 btn btn-success my-2 my-sm-0">Login</a>
+          {% endif %}
+          
+          &nbsp;
+          
+          {% if user.is_authenticated %}
+            
+          {% else %}
+          <a href="{% url 'registerpage' %}" class="my-2 my-lg-0 btn btn-success my-2 my-sm-0">Signup</a>
+          {% endif %}
+
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="navbar">
+            <img src="{% static 'css/logo.png' %}" class="logo" >
+            <navli>
+                <ul>
+                    <li><a href="{% url 'about_us' %}"><b>About</b></a></li>
+                    <li><a href="{% url 'location' %}"><b>Location</b></a></li>
+                    <li><a href="{% url 'notice' %}"><b>Notice</b></a></li>
+                </ul>
+            </navli>
+            <img src="{% static 'css/menu.png' %}" class="menu-icon">
+        </div> 
+        <div class="row">
+            <div class="col">
+                <h1>IST</h1>
+                <p>
+                    Institute of Science and Technology (IST), Dhaka,
+                     Bangladesh, is celebrating its 28th anniversary this year. Over the last decade,
+                      IST has earned local and global reputation by creating highly qualified Computer 
+                      Experts, Scientists and Business Experts of highest potential.
+                </p>
+                <button type="button"><b>Explore</b></button>
+            </div>
+            <div class="col">
+        <div class="card card1">
+            <h5>here</h5>
+            <p>
+                To acquire knowledge, one must study;
+                
+            </p>
+        <div class="card card2">
+            <h5>here</h5>
+            <p>
+                The ink of 
+                 the scholar is more.
+            </p>
+            <div class="card card3">
+            <h5>here</h5>
+            <p>
+                Let us study things that are no more. It is necessary 
+                
+            </p>
+        <div class="card card4">
+            <h5>here</h5>
+            <p>
+                The authority of those who 
+            </p>
+            
+        </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+{% block extrajs %}
+{% endblock extrajs %}
+    
+</body>
+</html>

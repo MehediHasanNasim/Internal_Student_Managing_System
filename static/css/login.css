@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .my_body {
+    background: url("bgcc2.jpg");
+    background-size: 100%;
+    background-position: 0px 0px;
+  }
+  .div_main {
+    width: 400px;
+    height: 410px;
+    margin: 25px auto 100px auto;
+  }
+  .h1 {
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  .div_register {
+    background-color: rgba(0,0,0,0.8);
+    width: 30%;
+    font-size: 23px;
+    border-radius: 30px;
+    border: 1px soid rgba(255,255,255,0.3);
+    box-shadow: 5px 5px 25px rgba(10,10,10,5);
+    color:aliceblue;
+  }
+  .heading_write{
+      font-size: 20px;
+      color:aliceblue;
+      margin-top: 0%;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.8);
+      border-radius: 70px;
+      width: 180px;
+      height: 80px;
+      margin: 20px auto -10px auto;
+  
+  }
+  .form_register{
+      margin: 17px;
+      
+  }
+  .submit{
+      width: 150px;
+      padding: 5px;
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 600;
+      border-radius: 3px;
+      background-color: rgba(260,140,35,0.5);
+      color: aliceblue;
+      cursor: pointer;
+      border: 1px solid
+      rgba(252,252,252,1);
+      box-shadow: 1px 1px 5px
+      rgba(252,252,252,1);
+  
+  
+  }
+  .submitr{
+    width: 300px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 200;
+    border-radius: 3px;
+    
+    color:azure;
+    cursor: pointer;
+
+
+
+}

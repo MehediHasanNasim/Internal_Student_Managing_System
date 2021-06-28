@@ -1,0 +1,62 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.my_body {
+  background: url("BG.jpg");
+  background-size: 80%;
+  background-position: 50px 0px;
+}
+.div_main {
+  width: 400px;
+  height: 380px;
+  margin: 50px auto 200px auto;
+}
+.h1 {
+  text-align: center;
+  padding: 15px;
+  font-family: sans-serif;
+}
+.div_register {
+  background-color: rgba(0,0,0,0.8);
+  width: 30%;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 1px soid rgba(255,255,255,0.3);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  color:aliceblue;
+}
+.heading_write{
+    font-size: 20px;
+    color:aliceblue;
+    margin-top: 10%;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto 200px auto;
+
+}
+.form_register{
+    margin: 17px;
+    
+}
+.submit{
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 600;
+    border-radius: 3px;
+    background-color: rgba(260,140,35,0.5);
+    color: aliceblue;
+    cursor: pointer;
+    border: 1px solid
+    rgba(252,252,252,1);
+    box-shadow: 1px 1px 5px
+    rgba(252,252,252,1);
+
+
+}

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none !important;
+}
+.my_body {
+    background: url("BG.jpg");
+    background-size: 80%;
+    background-position: 50px 0px;
+}
+.heading_write{
+    font-size: 30px;
+    color:aliceblue;
+    margin-top: 10%;
+    padding: 30px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 30px;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto 200px auto;
+}
+

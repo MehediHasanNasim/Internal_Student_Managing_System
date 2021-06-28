@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/studentinfo.css' %}">
+
+{% block extracss %}
+
+{% endblock extracss %}
+
+<title>
+  student info
+</title>
+{% block title %}
+
+{% endblock title %}
+
+{% block studentformactive %}
+    
+{% endblock studentformactive %}
+
+
+
+<body class="my_body">
+  <h2 class="p-1 text-white text-center mt-0 infohead">{{ student.first_name }}'s info</h2>
+
+<div class="p-3 card-body h4">
+    
+    {% if student.photo %}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="{{ student.photo.url }}" alt="" class="my_image text-center">
+            
+    {% else %}
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="{% static 'image/blank.jpg' %}" alt="" class="my_image text-center">
+    {% endif %} 
+
+    <div class="card-body">
+      <h4 class="text-white">User id : {{ student.id }}</h4>
+      <h4 class="text-white">Student Name :  {{ student.first_name }} {{student.last_name}}</h4>
+      <h4 class="text-white">Department : {{ student.dept }}</h4>
+      <h4 class="text-white">Session : {{ student.session }}</h4>
+      <h4 class="text-white">Roll : {{ student.roll }}</h4>
+      <h4 class="text-white">Reg : {{ student.reg }}</h4>
+      <h4 class="text-white">Phone : {{ student.phone }}</h4>
+      <h4 class="text-white">Attend % : {{ student.atd_percent }}</h4>
+      <h4 class="text-white">Due : {{ student.due }}</h4>
+
+    </div>
+
+</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href=" {% url 'student_delete' student.id %} " class="btn btn-danger">Delete</a>
+<a href=" {% url 'student_update' student.id %} " class="btn btn-warning">Update</a>
+
+<a href="{% url 'admin_home' %}" class="btn btn-primary">Back to Administration?</a><br><br><br>
+
+
+</body>
+
+
+{% block extrajs %}
+<script>
+    $(document).ready(function () {
+      window.history.replaceState('', '', window.location.href);
+    });
+  </script>
+{% endblock extrajs %}

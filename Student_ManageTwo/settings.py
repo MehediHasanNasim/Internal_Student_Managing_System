@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'itsapp',
+    'django_cleanup',
 ]
 
 MIDDLEWARE = [
@@ -131,13 +132,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = STATIC_DIR/ 'media'
 
-# email field
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'usernasim272727@gmail.com'
-# EMAIL_HOST_PASSWORD = '01407515989' 
+
 
 SECRET_KEY = config('SECRET_KEY')
 EMAIL_BACKEND = config('EMAIL_BACKEND')

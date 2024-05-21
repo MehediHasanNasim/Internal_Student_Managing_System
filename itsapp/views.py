@@ -120,7 +120,6 @@ def loginpage(request):
         diction = {}
         return render(request, 'itsapp/userlogin.html', context=diction)
 
-
 @login_required(login_url='loginpage')
 def userprofile(request):
     diction= {}

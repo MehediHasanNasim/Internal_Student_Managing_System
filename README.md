@@ -19,16 +19,16 @@ This project is an Internal School Management System developed using Django. It 
 - **Framework:** Django
 - **Database:** SQL Database
 
-## Setup Instructions
+## Setup Instructions to Run
 Follow these steps to set up the project on your local machine.
 
-### Prerequisites
+### Prerequisites (Install)
 - Python 3.x
 - Django 3.x
 - A SQL database (e.g., SQLite, PostgreSQL)
 - Git
 
-### Installation
+### Run
 1. **Clone the repository:**
     ```sh
     git clone https://github.com/MehediHasanNasim/Internal_Student_Managing_System.git
@@ -70,8 +70,33 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'your-email@example.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
+```
+
+## Project Flow and Frontend View
+
+### About section
+![Screenshot 2024-05-22 012530](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/5af494c5-33a5-4d7e-b395-2ec3f448758a)
+
+### Location Link
+![Screenshot 2024-05-22 012600](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/b9df5c03-c07a-4152-b23b-de3c85428e4d)
+
+### Signup
+![Screenshot 2024-05-22 013255](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/25e7e0d8-64f3-400a-b6d4-a6e7280fc654)
+
+### User Profile
+![Screenshot 2024-05-22 012835](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/4d6b34a9-9e98-4dea-a950-1a6775006bb5)
+
+### Admin Dashboard of Student List
+![Screenshot 2024-05-22 012923](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/963c226d-c920-413a-89d9-eb9e882b33f2)
+
+### Student Info
+![Screenshot 2024-05-22 012950](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/ae2236b4-d7ba-4621-bc98-ba9218f9f9ff)
+
+### Edit or Update Student info page
+![Screenshot 2024-05-22 013058](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/04e4b6ba-5c71-4f83-abf0-04c938f9015e)
+
+### Student Form
+![Screenshot 2024-05-22 013206](https://github.com/MehediHasanNasim/Internal_Student_Managing_System/assets/75909031/2f0c1574-7eb2-4d93-8a53-6d39ed39992a)
 
 
-
-### Frontend View
 
